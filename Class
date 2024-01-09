@@ -1,0 +1,33 @@
+//In Java Object-Oriented Programming (OOP), a "Class" is a blueprint for creating objects, encapsulating data (attributes) and behavior (methods) related to those objects.
+package CODEJAVA.exampleclass;
+
+// Class definition
+public class Class {
+    // Instance variables
+    String name;
+    int age;
+
+    // Constructor to initialize object with name and age
+    public Class(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method to introduce the person
+    public void introduce() {
+        System.out.println("Hi, I'm " + name + " and I'm " + age + " years old.");
+    }
+
+    // Main method, entry point of the program
+    public static void main(String[] args) {
+        // Creating an instance of the Class
+        Class person1 = new Class("John", 25);
+
+        // Printing the name and age of the person
+        System.out.println("Name: " + person1.name);
+        System.out.println("Age: " + person1.age);
+
+        // Calling the introduce method to introduce the person
+        person1.introduce();
+    }
+}
