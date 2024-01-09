@@ -1,0 +1,18 @@
+//A constructor method in Java is a special method responsible for initializing objects when they are created, typically used to set initial values or perform setup tasks.
+// Define a Java package named CODEJAVA.javaconstructor
+package CODEJAVA.javaconstructor;
+
+// Define a class named Constructor
+public class Constructor {
+    // Constructor method without parameters
+    public Constructor() {
+        // Print a message indicating that the constructor is called and an object is created
+        System.out.println("Constructor called. Object created!");
+    }
+
+    // Main method, the entry point of the program
+    public static void main(String[] args) {
+        // Create an instance of the Constructor class, calling its constructor
+        Constructor myObject = new Constructor();
+    }
+}
