@@ -1,0 +1,38 @@
+//In Java OOP, an interface is a collection of abstract methods that defines a contract for classes to implement, allowing multiple classes to share common method signatures while promoting code flexibility and adaptability.
+// Interface defining the contract for shapes
+interface Shape {
+    // Method to calculate the area of a shape
+    double calculateArea();
+}
+
+// Class representing a circle that implements the Shape interface
+class Circle implements Shape {
+    // Private field to store the radius of the circle
+    private double radius;
+
+    // Constructor to initialize the circle with a given radius
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Implementation of the calculateArea method for a circle
+    @Override
+    public double calculateArea() {
+        // Area calculation for a circle using the formula: π * r^2
+        return Math.PI * radius * radius;
+    }
+}
+
+// Main class containing the entry point of the program
+public class Interface {
+    public static void main(String[] args) {
+        // Creating an instance of the Circle class with a radius of 5.0
+        Circle circle = new Circle(5.0);
+
+        // Calculating the area of the circle
+        double area = circle.calculateArea();
+
+        // Printing the calculated area of the circle
+        System.out.println("Circle Area: " + area);
+    }
+}
