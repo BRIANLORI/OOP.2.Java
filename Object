@@ -1,0 +1,26 @@
+//In Java Object-Oriented Programming (OOP), an object is an instance of a class, encapsulating data and behavior, serving as the building block for creating modular and reusable code.
+// Define a class named Object within the package CODEJAVA.javaobject
+package CODEJAVA.javaobject;
+
+// Object class to represent a generic object, in this case, a car
+public class Object {
+    // Declare a member variable to store the brand of the object (car)
+    String brand;
+
+    // Method to start the object (car) and print a message indicating it is starting
+    public void start() {
+        System.out.println(brand + " is starting.");
+    }
+
+    // Main method, the entry point of the program
+    public static void main(String[] args) {
+        // Create an instance of the Object class, representing a car
+        Object myCar = new Object();
+
+        // Set the brand of the car to "Toyota"
+        myCar.brand = "Toyota";
+
+        // Call the start method to indicate that the car is starting
+        myCar.start();
+    }
+}
