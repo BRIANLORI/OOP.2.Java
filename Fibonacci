@@ -1,0 +1,31 @@
+// Fibonacci
+public class Fibonacci {
+    public static void main(String[] args) {
+        // Set the limit for Fibonacci sequence terms
+        int limit = 4000000;
+
+        // Initialize variables to keep track of sum, previous, and current terms
+        int sum = 0;
+        int prev = 1;
+        int current = 2;
+
+        // Loop through Fibonacci sequence terms until the limit is reached
+        while (current <= limit) {
+            // Check if the current term is even
+            if (current % 2 == 0) {
+                // Add the even term to the sum
+                sum += current;
+            }
+
+            // Calculate the next term in the Fibonacci sequence
+            int next = prev + current;
+
+            // Update previous and current terms for the next iteration
+            prev = current;
+            current = next;
+        }
+
+        // Print the sum of even-valued terms in the Fibonacci sequence
+        System.out.println("Sum of even-valued terms in Fibonacci sequence: " + sum);
+    }
+}
