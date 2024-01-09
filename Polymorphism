@@ -1,0 +1,36 @@
+//Polymorphism in Java OOP allows objects of different classes to be treated as objects of a common superclass through method overriding.
+// The base class representing an Animal with a generic sound
+class Animal {
+    public void makeSound() {
+        System.out.println("Some generic sound");
+    }
+}
+
+// A subclass Dog extending Animal
+class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Bark");
+    }
+}
+
+// A subclass Cat extending Animal
+class Cat extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Meow");
+    }
+}
+
+// The main class demonstrating polymorphism
+public class Polymorphism {
+    public static void main(String[] args) {
+        // Creating instances of Dog and Cat, but referring to them as Animals
+        Animal dog = new Dog();
+        Animal cat = new Cat();
+
+        // Calling makeSound method, which is dynamically bound at runtime
+        dog.makeSound(); // Output: Bark
+        cat.makeSound(); // Output: Meow
+    }
+}
